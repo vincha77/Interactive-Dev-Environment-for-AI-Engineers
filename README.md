@@ -93,9 +93,9 @@ uv is an extremely fast Python package manager and virtual environment managemen
 
 Some commands we will use in this lesson when it comes to `uv` and `pip`:
 
-`uv venv create -p 3.11 .venv` -> This creates a virtual environment with Python 3.11. A virtual environment is a Python environment such that the Python interpreter, libraries, and scripts installed into it are isolated from those installed on other environments and any libraries installed on the system. So basically, this allows you to keep all your project's code/dependencies/libraries separated from other projects.
+`uv venv .venv -p 3.11` -> This creates a virtual environment with Python 3.11. A virtual environment is a Python environment such that the Python interpreter, libraries, and scripts installed into it are isolated from those installed on other environments and any libraries installed on the system. So basically, this allows you to keep all your project's code/dependencies/libraries separated from other projects.
 
-`uv venv activate` -> This activates the virtual environment for your current terminal session.
+`source .venv/bin/activate` -> This activates the virtual environment for your current terminal session.
 
 `uv pip install numpy pandas matplotlib jupyter openai huggingface_hub` -> This installs the six packages mentioned - `numpy`, `pandas`, `jupyter`, `matplotlib`, `openai`, and `huggingface_hub`. `numpy` is used for scientific computing, `pandas` is used for data analysis, `matplotlib` is used for data graphics. `jupyter` is discussed later in this tutorial in depth! `openai` is used to access OpenAI's GPT models through an API key. `huggingface_hub` is used to push our code and models to Huggingface and host it in a Huggingface Space.
 
