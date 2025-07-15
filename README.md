@@ -245,7 +245,7 @@ Now let's install uv and other tools:
 
   2. Type "Python" in the search bar.
 
-  3. Click `Install` <img src="https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/4c06f2a7-d7c3-4c59-b656-82170518cbeb" width=30px/>  on the <ins><strong>Python</strong> extension</ins>
+  3. Click `Install` <img src="https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/4c06f2a7-d7c3-4c59-b656-82170518cbeb" width=30px/>  on the <ins><strong>Python</strong></ins> extension
 
   4. Then, type "Jupyter" in the search bar.
 
