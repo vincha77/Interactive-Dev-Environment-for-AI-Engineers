@@ -104,13 +104,13 @@ Some commands we will use in this lesson when it comes to `uv` and `pip`:
 <details>
 <summary>Alternative way to manage python versions while still using uv</summary>
 
-Use `pyenv versions` to check versions of python installed using `pyenv`.
+Use `pyenv versions` to check versions of python installed using `pyenv`
 
 If it is necessary to install a new/different version of python use `pyenv` to install.
 
 Set `global`, `local`, and `shell` versions of python using `pyenv global <VERSION>`, `pyenv local <VERSION>` and `pyenv shell <VERSION>`.
 
-Make your PROJECT_DIR and `cd PROJECT_DIR`.  Then run `pyenv local <VERSION>`.  This will install a `.python_version` file in the folder.  NOTE: check the file with `pyproject.toml` and if needed edit the line with the python version to match the preferred version of python.  For example, if 3.13.9 is the preferred version of python, then ensure that the line `requires-python = ">=3.13,<3.14"` exists in the `pyproject.toml` file.  Then run `uv sync --no-python-downloads` to use uv to set up the virtual environment but not installing a new version of python.
+Make your `PROJECT_DIR` and `cd PROJECT_DIR`.  Then run `pyenv local <VERSION>`.  This will install a `.python_version` file in the folder.  NOTE: check the file with `pyproject.toml` and if needed edit the line with the python version to match the preferred version of python.  For example, if 3.13.9 is the preferred version of python, then ensure that the line `requires-python = ">=3.13,<3.14"` exists in the `pyproject.toml` file.  Then run `uv sync --no-python-downloads` to use uv to set up the virtual environment but not installing a new version of python.
 
 Rest follows the usual pattern:
 
