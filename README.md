@@ -101,6 +101,27 @@ Some commands we will use in this lesson when it comes to `uv` and `pip`:
 
 </details>
 
+<details>
+<summary>Alternative way to manage python versions while still using uv</summary>
+
+Use `pyenv versions` to check versions of python installed using `pyenv`.
+
+If it is necessary to install a new/different version of python use `pyenv` to install.
+
+Set `global`, `local`, and `shell` versions of python using `pyenv global <VERSION>`, `pyenv local <VERSION>` and `pyenv shell <VERSION>`.
+
+Make your PROJECT_DIR and `cd PROJECT_DIR`.  Then run `pyenv local <VERSION>`.  This will install a `.python_version` file in the folder.  NOTE: check the file with `pyproject.toml` and if needed edit the line with the python version to match the preferred version of python.  For example, if 3.13.9 is the preferred version of python, then ensure that the line `requires-python = ">=3.13,<3.14"` exists in the `pyproject.toml` file.  Then run `uv sync --no-python-downloads` to use uv to set up the virtual environment but not installing a new version of python.
+
+Rest follows the usual pattern:
+
+For example:
+
+`source .venv/bin/activate` -> This activates the virtual environment for your current terminal session.
+
+`uv pip install numpy pandas matplotlib jupyter openai huggingface_hub` -> This installs the six packages mentioned - `numpy`, `pandas`, `jupyter`, `matplotlib`, `openai`, and `huggingface_hub`. `numpy` is used for scientific computing, `pandas` is used for data analysis, `matplotlib` is used for data graphics. `jupyter` is discussed later in this tutorial in depth! `openai` is used to access OpenAI's GPT models through an API key. `huggingface_hub` is used to push our code and models to Huggingface and host it in a Huggingface Space.
+
+</details>
+
 <p></p>
 
 ## :rocket: Let's Get Started! 
