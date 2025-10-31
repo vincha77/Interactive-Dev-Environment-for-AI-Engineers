@@ -796,6 +796,75 @@ Then click `Create Repository`.
   ```
 </details>
 
+<details>
+  <summary>My summary of the Git Workflow For the Class</summary>
+
+  Conceptually, the workflow should look like this...
+
+  1.  set up main and origin repos 
+  2.  set up remote upstream repo BC/main and fetch 
+  3.  create a local branch BCBranch for the BC/main repo 
+  4.  switch to main 
+  5.  Merge BCBranch 
+  6.  Push changes to origin 
+  7.  Then: create local dev branch from main 
+  8.  make edits to local dev branch 
+  9.  Switch to main 
+  10. Merge local dev branch 
+  11. Push to main 
+  12. Fetch latest BC/main 
+  13. Merge to BCBranch using ff-only flag 
+  14. push changes to origin... and on and on
+
+  In instructions this looks as follows:
+
+
+```console
+  INITIAL SETUP!!!
+
+  <set up origin repo on GitHub>
+  
+  git clone <my_remote_empty_repo>
+  git remote add BC git@github.com:AI-Maker-Space/Beyond-ChatGPT.git
+  git checkout --track -b BCBranch BC/main
+  git checkout main
+  git merge BCBranch --allow-unrelated-histories
+  git add .
+  git commit -m "message-here"
+  git push origin main
+  ```
+
+  ```console
+  FIRST WORKFLOW!!!
+
+  git checkout -b LocalDev
+  git add .
+  git commit -m "Adding a LocalDev branch."
+  git checkout main
+  git merge LocalDev
+  git push origin main
+  ```
+
+  ``` console
+  REPEAT THE PROCESS!!!
+  
+  git fetch --all
+  git checkout BCBranch
+  git merge --ff-only @{u}
+  git checkout main
+  git merge BCBranch --allow-unrelated-histories
+  git push origin main
+  git checkout -b LocalDev
+  git add .
+  git commit -m "branch is updated"
+  git checkout main
+  git merge LocalDev
+  git push origin main
+  ```
+
+</details>
+
+
 <p></p>
 
 ## <img src="https://jupyter.org/assets/homepage/main-logo.svg" width=40px/>  Bringing it all together with Jupyter Notebooks
