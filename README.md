@@ -825,19 +825,22 @@ Then click `Create Repository`.
   <set up origin repo on GitHub>
   
   git clone <my_remote_empty_repo>
+  ```
+
+  ```console
+  FIRST WORKFLOW!!!
+
   git remote add BC git@github.com:AI-Maker-Space/Beyond-ChatGPT.git
+  git fetch --all
   git checkout --track -b BCBranch BC/main
   git checkout main
   git merge BCBranch --allow-unrelated-histories
   git add .
   git commit -m "message-here"
   git push origin main
-  ```
-
-  ```console
-  FIRST WORKFLOW!!!
 
   git checkout -b LocalDev
+  <MAKE CHANGES TO LOCAL DEV AS NEEDED>
   git add .
   git commit -m "Adding a LocalDev branch."
   git checkout main
@@ -848,9 +851,9 @@ Then click `Create Repository`.
   ``` console
   REPEAT THE PROCESS!!!
   
+  git remote add BC git@github.com:AI-Maker-Space/Beyond-ChatGPT.git
   git fetch --all
-  git checkout BCBranch
-  git merge --ff-only @{u}
+  git checkout --track -b BCBranch BC/main OR [git checkout BCBranch ; and then git merge --ff-only @{u}]
   git checkout main
   git merge BCBranch --allow-unrelated-histories
   git push origin main
